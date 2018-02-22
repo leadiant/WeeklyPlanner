@@ -1,0 +1,67 @@
+<aura:component controller="fullCalendarApexController" access="global" implements="force:appHostable,flexipage:availableForAllPageTypes">
+
+    <!-- LIBRARIES -->
+    <ltng:require styles="{!$Resource.fullCalendar + '/css/fullcalendar.min.css'}" scripts="{!join(',',
+            $Resource.fullCalendar + '/lib/jquery.min.js',
+            $Resource.fullCalendar + '/lib/moment.min.js',
+            $Resource.fullCalendar + '/lib/jquery-ui.min.js',
+            $Resource.fullCalendar + '/lib/fullcalendar.min.js')}" afterScriptsLoaded="{!c.jsLoaded}" />
+
+    <!-- ATTRIBUTES -->
+    <aura:attribute type="String" name="headerDate" />
+    <aura:attribute type="String" name="view" default="month" />
+    <aura:attribute name="events" type="Event[]" description="A list of events to display on the calendar" />
+    <aura:attribute name="ScheduledEvents" type="Object[]" />
+    <aura:attribute name="modal" type="Aura.Component" />
+    <aura:attribute name="addEventComponent" type="Aura.Component" />
+    <aura:attribute access="private" name="scheduledEvent" type="Object" default="{}" />
+    <aura:attribute name="showDeleteButton" type="Boolean" default="{!false}" access="private" />
+
+    <aura:attribute name="isScriptLoaded" type="Boolean" default="{!false}" access="private"/>
+
+    <!-- DEPENDENCIES -->
+    <aura:dependency resource="markup://c:addEvent" type="COMPONENT" />
+    <aura:dependency resource="markup://c:toaster" type="COMPONENT" />
+    <aura:dependency resource="markup://c:Spinner" type="COMPONENT" />
+
+    <!-- EVENTS -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:registerEvent name="dayClickEvent" type="c:strike_evt" />
+    <aura:handler name="dayClickEvent" event="c:strike_evt" action="{!c.handledayClickEvent}" />
+    <aura:registerEvent name="eventClick" type="c:strike_evt" />
+    <aura:handler name="eventClick" event="c:strike_evt" action="{!c.handleEventClick}" />
+    <aura:registerEvent name="eventDrop" type="c:strike_evt" />
+    <aura:handler name="eventDrop" event="c:strike_evt" action="{!c.handleEventDrop}" />
+    <aura:registerEvent name="eventResize" type="c:strike_evt" />
+    <aura:handler name="eventResize" event="c:strike_evt" action="{!c.handleEventResize}" />
+    <aura:registerEvent name="drop" type="c:strike_evt" />
+    <aura:handler name="drop" event="c:strike_evt" action="{!c.handleDrop}" />
+    <aura:registerEvent name="eventReceive" type="c:strike_evt" />
+    <aura:handler name="eventReceive" event="c:strike_evt" action="{!c.handleEventReceive}" />
+
+    <aura:handler name="strike_evt_modalCloseButtonClicked" event="c:strike_evt" action="{!c.handleClickX}" />
+
+    <aura:handler event="c:SearchResults" action="{!c.searchResultsHandler}"/>
+
+    <div aura:id="container">
+
+        <div id="calendar" class="anyCalendar">
+        </div>
+        <!-- /BODY -->
+        <c:strike_modal aura:id="newEventModal" title="Create Event">
+            <aura:set attribute="footerButtons">
+                <div class="slds-modal__footer_directional">
+                    <aura:if isTrue="{!v.showDeleteButton}">
+                        <lightning:button onclick="{!c.handleClickDeleteModal}" label="Delete" variant="destructive" class="slds-float_left slds-float_left"
+                        />
+                    </aura:if>
+                    <lightning:button variant="neutral" label="Cancel" onclick="{!c.handleClickCancelModal}" />
+                    <lightning:button variant="brand" label="Save" onclick="{!c.handleClickSave}" />
+                </div>
+            </aura:set>
+        </c:strike_modal>
+        <c:toaster aura:id="toaster" />
+        <c:Spinner aura:id="spinner" />
+
+    </div>
+</aura:component>

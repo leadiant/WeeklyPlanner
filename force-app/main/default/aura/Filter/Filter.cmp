@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    
+    <aura:registerEvent name="filterChange" type="c:FilterChange"/>    
+
+    <lightning:layout class="slds-m-vertical_medium">
+            <lightning:layoutitem flexibility="grow" class="right-padding">
+                <c:SearchBar onchange="{!c.searchKeyChangeHandler}"/>
+            </lightning:layoutitem>
+            <lightning:layoutitem flexibility="grow" class="right-padding">
+                <c:CategorySelector onchange="{!c.categoryChangeHandler}"/>
+            </lightning:layoutitem>
+    </lightning:layout>
+</aura:component>

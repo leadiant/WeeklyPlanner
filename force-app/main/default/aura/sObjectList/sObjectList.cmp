@@ -1,0 +1,35 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" 
+                controller="fullCalendarApexController" access="global">
+
+    <aura:attribute name="items" type="Object[]"/>
+    <aura:attribute name="filterObject" type="Object" />
+    <aura:attribute name="pageSize" type="Integer" default="8"/>
+    <aura:attribute name="page" type="Integer"/>
+    
+    <aura:attribute name="pages" type="Integer"/>
+    <aura:attribute name="total" type="Integer"/>
+
+   <aura:attribute name="object" type="String" description="String value that determines which records to search" default="Contact"/>
+   <aura:attribute name="searchKey" type="String" description="String value that determines searchKey"/>
+   <aura:attribute name="requestedPage" type="Integer" description="Integer value that determines which Page is requested by clicking previous or Next Page"/>
+
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="c:FilterChange" action="{!c.filterChangeHandler}"/>
+
+    <aura:registerEvent name="searchResults" type="c:SearchResults"/>    
+    
+    <div aura:id="external-events" id="{!globalId + 'external-events'}">
+        
+		<aura:iteration items="{!v.items}" var="item" indexVar="index">
+		    <lightning:layoutitem size="12">
+		     <c:sObjectTile result="{#item}" index="{#index}"/>
+		    </lightning:layoutitem>
+		</aura:iteration>
+        
+        <c:Paginator page="{!v.page}" pages="{!v.pages}" total="{!v.total}" label="products"
+                     previousPage="{!c.onPreviousPage}" nextPage="{!c.onNextPage}"/>
+        
+    </div>
+    
+</aura:component>

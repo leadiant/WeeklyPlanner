@@ -1,0 +1,22 @@
+<aura:component >
+    
+    <aura:attribute name="result" type="Object"/>
+    <aura:attribute name="index" type="Integer"/>
+
+    <aura:registerEvent name="navigateToSObject" type="force:navigateToSObject"/>
+    
+    <div data-sfid="{#v.result.value}" data-title="{#v.result.label}"  class="fc-event">
+        <lightning:layout verticalAlign="center">
+            <lightning:layoutitem >
+                <lightning:icon iconName="utility:rows" size="x-small"></lightning:icon> 
+            </lightning:layoutitem>
+            <lightning:layoutitem padding="around-small">
+                <lightning:icon iconName="standard:contact" class="merchandise" size="xx-small" alternativeText="Indicates approval"/>
+            </lightning:layoutitem>
+            <lightning:layoutitem flexibility="grow">
+                <div class="title slds-truncate"><a href="" onclick="{!c.titleClickHandler}">{#v.result.label}</a></div>
+            </lightning:layoutitem>
+        </lightning:layout>
+    </div> 
+    
+</aura:component>
