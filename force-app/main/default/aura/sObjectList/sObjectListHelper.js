@@ -1,66 +1,56 @@
 ({
-	loadMerchandise : function(component, page) {
-        var action = component.get("c.getContactsV1");
+	loadRecords : function(component, event, helper) {
+        var action = component.get("c.getRecords");
         var uniqueId = component.getGlobalId() + 'external-events';
         var searchResultsEvent = $A.get("e.c:SearchResults");
+        var returnedRecords = [];
 
         searchResultsEvent.setParams({
             "componentGlobalId": uniqueId
         });
 
+        action.setParams({
+            jsonString: JSON.stringify(helper.getParams(component, event, helper))
+        });
+
         action.setStorable();
 		var pageSize = component.get("v.pageSize");
-		action.setParams({
-      		"filters": JSON.stringify(component.get("v.filterObject")),
-            "pageSize": pageSize,
-            "pageNumber": page || 1
-        });
-        
+
         action.setCallback(this, function(res) {
             if (res.getState() === 'SUCCESS') {
                 var returnValue = JSON.parse(res.getReturnValue());
-
                 if (returnValue.isSuccess) {
-                    var returnedRecords = [];
-
-                    returnValue.results.data.items.forEach(function(record) {
+                    returnValue.results.data.forEach(function(record) {
                         returnedRecords.push({
-                            label: record.Name,
-                            sublabel: record.Account.Name,
-                            value: record.Id
+                            label: record.label,
+                            value: record.value,
+                            objectName:record.objectName
                         });
                     });
-                    component.set('v.items', returnedRecords);
-                    component.set("v.page", returnValue.results.data.page);
-                    component.set("v.total", returnValue.results.data.total);
-                    component.set("v.pages", Math.ceil(returnValue.results.data.total/pageSize));
+                    component.set('v.records',  returnedRecords);
+                    component.set("v.page", returnValue.results.page);
+                    component.set("v.total", returnValue.results.total);
+                    component.set("v.pages", Math.ceil(returnValue.results.total/pageSize));
                     searchResultsEvent.fire();
                 }
             } else {
                 //helper.setRecords(component, event, helper, []);
+                //ToDO: Else Logic
             }
         });
 
-    		/*action.setCallback(this, function(response) {
-			var result = response.getReturnValue();
-            component.set("v.items", result.items);
-            component.set("v.page", result.page);
-            component.set("v.total", result.total);
-            component.set("v.pages", Math.ceil(result.total/pageSize));
-    		});*/
-        var startTime = performance.now();
-    		$A.enqueueAction(action);
+   		$A.enqueueAction(action);
     },
 
     getParams: function(component) {
         var object = component.get('v.object');
-        var searchKey = component.get('v.searchKey');
+        var searchTerm = component.get('v.searchTerm');
         var pageNumber = component.get("v.requestedPage") || 1;
         var pageSize = component.get("v.pageSize");
 
         return {
             object: object,
-            searchKey: searchKey,
+            searchTerm: searchTerm,
             pageNumber:pageNumber,
             pageSize: pageSize
         };

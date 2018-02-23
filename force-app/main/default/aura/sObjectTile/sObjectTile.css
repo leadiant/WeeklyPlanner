@@ -22,12 +22,8 @@
     max-width: initial;
 }
 
-.THIS .price,
 .THIS .title {
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.THIS .price {
-    color: #FF6600;
-}

@@ -15,7 +15,7 @@
         component.makeSearchResultsDraggable = $A.getCallback(function(){
             $(document).ready(function(){
                 var parent = $(document.getElementById(uniqueId));
-                var events = $('.fc-event');
+                var events = $('.event');
                 var results = $(document.getElementById(uniqueId)).find(events);
                 results.each(function() {
 
@@ -23,7 +23,8 @@
 //                        title: $.trim($(this).text()), // use the element's text as the event title
                         title: $(this).data('title'),
 						stick: true, // maintain when user navigates (see docs on the renderEvent method)
-						contactId: $(this).data('sfid')
+                        contactId: $(this).data('sfid'),
+                        relatedTo: $(this).data('objectname')
                     });
                     
                     // make the event draggable using jQuery UI
@@ -172,8 +173,19 @@
         var droppedEvent = evt.getParam("data");
         cmp.set("v.showDeleteButton", false);
         var scheduledEvent = cmp.get("v.scheduledEvent");
-        scheduledEvent.contactId = droppedEvent.contactId;
         scheduledEvent.title = droppedEvent.title;
+        console.log(droppedEvent.relatedTo);
+        scheduledEvent.relatedTo = droppedEvent.relatedTo;
+
+        if (scheduledEvent.relatedTo === 'Account'){
+            scheduledEvent.accountId = droppedEvent.contactId;
+        }
+        
+        if (scheduledEvent.relatedTo === 'Contact'){
+            scheduledEvent.contactId = droppedEvent.contactId;
+        }
+        
+
         console.log(scheduledEvent);
         var newModalBody = [
             ["c:addEvent", {

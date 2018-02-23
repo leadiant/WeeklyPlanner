@@ -8,9 +8,6 @@
             $Resource.fullCalendar + '/lib/fullcalendar.min.js')}" afterScriptsLoaded="{!c.jsLoaded}" />
 
     <!-- ATTRIBUTES -->
-    <aura:attribute type="String" name="headerDate" />
-    <aura:attribute type="String" name="view" default="month" />
-    <aura:attribute name="events" type="Event[]" description="A list of events to display on the calendar" />
     <aura:attribute name="ScheduledEvents" type="Object[]" />
     <aura:attribute name="modal" type="Aura.Component" />
     <aura:attribute name="addEventComponent" type="Aura.Component" />
@@ -44,7 +41,6 @@
     <aura:handler event="c:SearchResults" action="{!c.searchResultsHandler}"/>
 
     <div aura:id="container">
-
         <div id="calendar" class="anyCalendar">
         </div>
         <!-- /BODY -->
@@ -64,4 +60,5 @@
         <c:Spinner aura:id="spinner" />
 
     </div>
+
 </aura:component>

@@ -5,16 +5,21 @@
 
     <aura:registerEvent name="navigateToSObject" type="force:navigateToSObject"/>
     
-    <div data-sfid="{#v.result.value}" data-title="{#v.result.label}"  class="fc-event">
+    <div data-sfid="{#v.result.value}" data-title="{#v.result.label}"  data-objectName="{#v.result.objectName}" class="event slds-p-left_small">
         <lightning:layout verticalAlign="center">
             <lightning:layoutitem >
                 <lightning:icon iconName="utility:rows" size="x-small"></lightning:icon> 
             </lightning:layoutitem>
             <lightning:layoutitem padding="around-small">
-                <lightning:icon iconName="standard:contact" class="merchandise" size="xx-small" alternativeText="Indicates approval"/>
+                    <aura:if isTrue="{#v.result.objectName == 'Contact' }">
+                        <lightning:icon iconName="standard:contact" variant = "inverse" class="merchandise" alternativeText="contact"/>
+                    </aura:if>
+                    <aura:if isTrue="{#v.result.objectName == 'Account' }">
+                            <lightning:icon iconName="standard:account" variant = "inverse" class="merchandise" alternativeText="Account"/>
+                    </aura:if>
             </lightning:layoutitem>
-            <lightning:layoutitem flexibility="grow">
-                <div class="title slds-truncate"><a href="" onclick="{!c.titleClickHandler}">{#v.result.label}</a></div>
+            <lightning:layoutitem>
+                <div class="title">{#v.result.label}</div>
             </lightning:layoutitem>
         </lightning:layout>
     </div> 
