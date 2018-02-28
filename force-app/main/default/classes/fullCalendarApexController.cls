@@ -23,7 +23,7 @@ public class fullCalendarApexController {
         @AuraEnabled
         public String accountName {get; set; }
         @AuraEnabled
-        public String relatedTo {get; set; }
+        public String assignTo {get; set; }
         @AuraEnabled
         public String description {get; set; }
         
@@ -38,7 +38,7 @@ public class fullCalendarApexController {
             contactName = event.who.Name; 
             accountId = event.WhatId; 
             accountName = event.account.Name; 
-            relatedTo = event.WhatId == null?'Contact':'Account'; 
+            assignTo = event.WhatId == null?'Contact':'Account'; 
         }
         
         public Event toSObject() {

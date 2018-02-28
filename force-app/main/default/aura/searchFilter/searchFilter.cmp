@@ -1,0 +1,15 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    
+    <aura:registerEvent name="searchFilterChange" type="c:searchFilterChange"/>    
+    <lightning:card title="Record Filters" iconName="custom:custom39">
+
+    <lightning:layout>
+            <lightning:layoutitem flexibility="grow" class="left-padding right-padding">
+                <c:SearchBar onchange="{!c.searchKeyChangeHandler}"/>
+            </lightning:layoutitem>
+            <lightning:layoutitem flexibility="grow" class="right-padding">
+                <c:CategorySelector onchange="{!c.categoryChangeHandler}"/>
+            </lightning:layoutitem>
+    </lightning:layout>
+</lightning:card>
+</aura:component>

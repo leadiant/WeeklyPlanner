@@ -168,13 +168,12 @@
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\staticresources\\fullCalendar\\lib",
             "isDirectory": true,
             "size": 0,
-            "modifiedTime": 1519242466946,
-            "changeTime": 1519242466946,
-            "contentHash": "21eeee74ee8347c54804464cbee40219162d3c23",
+            "modifiedTime": 1519659569544,
+            "changeTime": 1519659569544,
+            "contentHash": "1b59abb7bd8e4bfea9149fa3b9a7fed44696f00c",
             "isMetadataFile": false,
             "state": "u",
-            "isWorkspace": false,
-            "isArtifactRoot": false
+            "isWorkspace": false
         }
     ],
     [
@@ -626,10 +625,10 @@
         {
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\addEvent\\addEvent.cmp",
             "isDirectory": false,
-            "size": 2640,
-            "modifiedTime": 1519161985748,
-            "changeTime": 1519161985748,
-            "contentHash": "d17c94aae04909e62fa365e8df1b71e1a12167b7",
+            "size": 2677,
+            "modifiedTime": 1519763024728,
+            "changeTime": 1519763024728,
+            "contentHash": "f2671917be0392b13be5f29e628d4ddfc26e6aea",
             "isMetadataFile": false,
             "state": "u"
         }
@@ -1497,10 +1496,10 @@
         {
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\classes\\fullCalendarApexController.cls",
             "isDirectory": false,
-            "size": 7015,
-            "modifiedTime": 1519414585788,
-            "changeTime": 1519414585788,
-            "contentHash": "ccdc2bd1529d8cf5992fec70821bdc622e6624bf",
+            "size": 7013,
+            "modifiedTime": 1519762914759,
+            "changeTime": 1519762914759,
+            "contentHash": "06abe05261dc3098ade7ce654f46158ce0263812",
             "isMetadataFile": false,
             "state": "u"
         }
@@ -2265,7 +2264,7 @@
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList",
             "isDirectory": true,
             "size": 0,
-            "modifiedTime": 1519248592720,
+            "modifiedTime": 1519760879497,
             "changeTime": 1519248592720,
             "contentHash": "1957514769e6cdd0dab0bd11dbf2959a2180006f",
             "isMetadataFile": false,
@@ -2303,10 +2302,10 @@
         {
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList\\sObjectList.cmp",
             "isDirectory": false,
-            "size": 1750,
-            "modifiedTime": 1519420747154,
-            "changeTime": 1519420747154,
-            "contentHash": "cf14702531e5922af815f26e3206d7e02afdc828",
+            "size": 1778,
+            "modifiedTime": 1519760879491,
+            "changeTime": 1519760879491,
+            "contentHash": "a7be9552e3a3b12a75b2b61d2229605938fa4c23",
             "isMetadataFile": false,
             "state": "u"
         }
@@ -2368,10 +2367,10 @@
         {
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList\\sObjectListController.js",
             "isDirectory": false,
-            "size": 977,
-            "modifiedTime": 1519410690021,
-            "changeTime": 1519410690021,
-            "contentHash": "2541fbc21fc8869e9520270a1d078b6f8ede2b62",
+            "size": 998,
+            "modifiedTime": 1519761217990,
+            "changeTime": 1519761217990,
+            "contentHash": "755ca1881b3c80154f6c182eefdaf3100cc3212b",
             "isMetadataFile": false,
             "state": "u"
         }
@@ -2381,10 +2380,10 @@
         {
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList\\sObjectListHelper.js",
             "isDirectory": false,
-            "size": 2085,
-            "modifiedTime": 1519413546695,
-            "changeTime": 1519413546695,
-            "contentHash": "3a369053ef9a0f9450e331d8ddacd85dd132c674",
+            "size": 2156,
+            "modifiedTime": 1519761190432,
+            "changeTime": 1519761190432,
+            "contentHash": "10711ad35fe211158283e7ae182c8305c3aad5d8",
             "isMetadataFile": false,
             "state": "u"
         }
@@ -2421,7 +2420,7 @@
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectTile\\sObjectTile.cmp",
             "isDirectory": false,
             "size": 1344,
-            "modifiedTime": 1519421820501,
+            "modifiedTime": 1519759764914,
             "changeTime": 1519421820501,
             "contentHash": "5f124d65d1a7a4012a0ff7611699162780cea1f1",
             "isMetadataFile": false,
@@ -2525,7 +2524,7 @@
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\fullCalendar",
             "isDirectory": true,
             "size": 0,
-            "modifiedTime": 1519268895658,
+            "modifiedTime": 1519760879486,
             "changeTime": 1519268895658,
             "contentHash": "6287a5b4211b37108da815d4708becdfae4fe198",
             "isMetadataFile": false,
@@ -2548,14 +2547,14 @@
     [
         "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\fullCalendar\\fullCalendar.cmp",
         {
-            "state": "u",
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\fullCalendar\\fullCalendar.cmp",
             "isDirectory": false,
+            "size": 3540,
+            "modifiedTime": 1519763179776,
+            "changeTime": 1519763179776,
+            "contentHash": "8f3782710105187052daa2f4393e2b69fd2b3a7d",
             "isMetadataFile": false,
-            "size": 3476,
-            "modifiedTime": 1519422085520,
-            "changeTime": 1519422085520,
-            "contentHash": "ad57430310af6230a32e690f2f5a3a63b568e6c2"
+            "state": "u"
         }
     ],
     [
@@ -2563,10 +2562,10 @@
         {
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\fullCalendar\\fullCalendar.cmp-meta.xml",
             "isDirectory": false,
-            "size": 244,
-            "modifiedTime": 1519317244983,
-            "changeTime": 1519317244984,
-            "contentHash": "4f3981faf4fc0d20ac2550e8c555e0a87443a646",
+            "size": 249,
+            "modifiedTime": 1519760593988,
+            "changeTime": 1519760593989,
+            "contentHash": "984cd1462a04bf130e0456cb9ad3300c03dda58e",
             "isMetadataFile": true,
             "state": "u"
         }
@@ -2576,10 +2575,10 @@
         {
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\fullCalendar\\fullCalendar.css",
             "isDirectory": false,
-            "size": 370,
-            "modifiedTime": 1519421987070,
-            "changeTime": 1519421987070,
-            "contentHash": "97b5cf73c92ae7eea11c695da5226135e7864785",
+            "size": 435,
+            "modifiedTime": 1519422255410,
+            "changeTime": 1519422255410,
+            "contentHash": "e9e1958f2b819e557f162571db81e1d161af07e8",
             "isMetadataFile": false,
             "state": "u"
         }
@@ -2615,10 +2614,10 @@
         {
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\fullCalendar\\fullCalendarController.js",
             "isDirectory": false,
-            "size": 13280,
-            "modifiedTime": 1519416585827,
-            "changeTime": 1519416585827,
-            "contentHash": "b6f3a459e38bc4bd1d171a79008723a4611d4b42",
+            "size": 13703,
+            "modifiedTime": 1519765163980,
+            "changeTime": 1519765163980,
+            "contentHash": "dafdb8acdfc39581f413215af52cf27ff3908345",
             "isMetadataFile": false,
             "state": "u"
         }
@@ -2626,14 +2625,14 @@
     [
         "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\fullCalendar\\fullCalendarHelper.js",
         {
+            "state": "u",
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\fullCalendar\\fullCalendarHelper.js",
             "isDirectory": false,
-            "size": 3660,
-            "modifiedTime": 1519313242234,
-            "changeTime": 1519313242234,
-            "contentHash": "db06269fdf32e6a111ff842595e7d8919c79619a",
             "isMetadataFile": false,
-            "state": "u"
+            "size": 3156,
+            "modifiedTime": 1519767285583,
+            "changeTime": 1519767285585,
+            "contentHash": "2f1e1f57452bf4c9d767cb504100faee009ab400"
         }
     ],
     [
@@ -2685,6 +2684,19 @@
             "changeTime": 1519270142807,
             "contentHash": "b5d510f24ab47e5ad621df006d1dcae037507e47",
             "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\staticresources\\fullCalendar\\lib\\calendar.js",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\staticresources\\fullCalendar\\lib\\calendar.js",
+            "isDirectory": false,
+            "size": 2506,
+            "modifiedTime": 1519762914759,
+            "changeTime": 1519762914759,
+            "contentHash": "6fa37174587d6d32d7838e0fc90243a00f945ab1",
+            "isMetadataFile": false,
             "state": "u"
         }
     ]

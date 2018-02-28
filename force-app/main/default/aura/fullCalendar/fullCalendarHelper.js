@@ -1,18 +1,32 @@
 ({
 	newEventInstance: function (component,date) {
-
-	
 		var startDateTime;
 		var endDateTime;
+		var allDayEvent = false;
 
-		if (date._f == "YYYY-MM-DD"){
+		var m = $.fullCalendar.moment(date);
+		console.log(date._f);
+		console.log(m.hasTime());
+
+		if (m.hasTime()){
+			startDateTime = moment(date.format()).format();
+			endDateTime = moment(date.format()).add(2, 'hours').format();
+			allDayEvent = false;
+		} else {
+			alert(date.format('LT'));
+			startDateTime = moment(date.format()).add(12, 'hours').format();
+			endDateTime = moment(date.format()).add(24, 'hours').format();
+			allDayEvent = true;
+		}
+
+	/*	if (date._f == "YYYY-MM-DD"){
 			startDateTime = moment(date.format()).add(12, 'hours').format();
 			endDateTime = moment(date.format()).add(14, 'hours').format();
 		} else {
 			startDateTime = moment(date.format()).format();
 			endDateTime = moment(date.format()).add(2, 'hours').format();
 		}
-
+*/
 		var scheduledEvent = {
 			Id:null,
 			contactId: null,
@@ -20,10 +34,9 @@
 			title:null,
 			start:startDateTime,
 			end:endDateTime,
-			allDay: false,
-			url:null,
+			allDay: allDayEvent,
 			description:null,
-			relatedTo:'Contact'
+			assignTo:'Contact'
 		};
 		component.set("v.scheduledEvent", scheduledEvent);
 	},
@@ -45,7 +58,7 @@
 			if (component.isValid() && state === "SUCCESS") {
 				var returnValue = JSON.parse(response.getReturnValue());
 				if (returnValue.isSuccess) {
-					component.set('v.ScheduledEvents', returnValue.results.data);
+					component.set('v.scheduledEvents', returnValue.results.data);
 					$('#calendar').fullCalendar('removeEvents');
 					$('#calendar').fullCalendar('addEventSource', returnValue.results.data);
 					component.get("v.modal").hide();
@@ -68,7 +81,7 @@
 	        if (component.isValid() && state === "SUCCESS") {
 				var returnValue = JSON.parse(response.getReturnValue());
 				if (returnValue.isSuccess) {
-					component.set('v.ScheduledEvents', returnValue.results.data);
+					component.set('v.scheduledEvents', returnValue.results.data);
 					$('#calendar').fullCalendar('addEventSource',returnValue.results.data);
 				}
 	        }
@@ -76,34 +89,4 @@
 	    $A.enqueueAction(getScheduledEventsAction);
 	},
 
-	makeSearchResultsDraggable: function (cmp,hlp) {
-		var uniqueId = cmp.getGlobalId() + 'external-events';
-		$(document).ready(function(){
-
-			// http://salesforce.stackexchange.com/questions/113816/refresh-a-jquery-accordion-in-a-lightning-component
-			setTimeout(function(){
-				var parent = $(document.getElementById(uniqueId));
-				var events = $('.fc-event');
-				var results = $(document.getElementById(uniqueId)).find(events);
-
-				results.each(function() {
-					// store data so the calendar knows to render an event upon drop
-					$(this).data('event', {
-						title: $.trim($(this).text()), // use the element's text as the event title
-						stick: true, // maintain when user navigates (see docs on the renderEvent method)
-						contactId: $(this).data('sfid')
-					});
-
-					// make the event draggable using jQuery UI
-					$(this).draggable({
-						zIndex: 999,
-						revert: true,      // will cause the event to go back to its
-						revertDuration: 0  //  original position after the drag
-					});
-
-				});
-			},0)
-
-		});
-	}
 })

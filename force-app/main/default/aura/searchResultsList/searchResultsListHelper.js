@@ -3,10 +3,10 @@
         var helper = this;
         var action = component.get("c.getRecords");
         var uniqueId = component.getGlobalId() + 'external-events';
-        var searchResultsEvent = $A.get("e.c:SearchResults");
+        var searchResultsAvailableEvent = $A.get("e.c:searchResultsAvailable");
         var returnedRecords = [];
 
-        searchResultsEvent.setParams({
+        searchResultsAvailableEvent.setParams({
             "componentGlobalId": uniqueId
         });
 
@@ -32,7 +32,7 @@
                     component.set("v.page", returnValue.results.page);
                     component.set("v.total", returnValue.results.total);
                     component.set("v.pages", Math.ceil(returnValue.results.total/pageSize));
-                    searchResultsEvent.fire();
+                    searchResultsAvailableEvent.fire();
                 }
             } else {
                 //helper.setRecords(component, event, helper, []);

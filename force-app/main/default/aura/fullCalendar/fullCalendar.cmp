@@ -8,10 +8,10 @@
             $Resource.fullCalendar + '/lib/fullcalendar.min.js')}" afterScriptsLoaded="{!c.jsLoaded}" />
 
     <!-- ATTRIBUTES -->
-    <aura:attribute name="ScheduledEvents" type="Object[]" />
+    <aura:attribute name="scheduledEvents" type="Object[]" />
     <aura:attribute name="modal" type="Aura.Component" />
     <aura:attribute name="addEventComponent" type="Aura.Component" />
-    <aura:attribute access="private" name="scheduledEvent" type="Object" default="{}" />
+    <aura:attribute name="scheduledEvent" access="private"  type="Object" default="{}" />
     <aura:attribute name="showDeleteButton" type="Boolean" default="{!false}" access="private" />
 
     <aura:attribute name="isScriptLoaded" type="Boolean" default="{!false}" access="private"/>

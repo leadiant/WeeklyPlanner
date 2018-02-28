@@ -1,17 +1,14 @@
 ({
-    doInit: function (cmp, evt, hlp) {
-        cmp.set("v.modal", cmp.find("newEventModal"));
+    doInit: function (component, event, helper) {
+        component.set("v.modal", component.find("newEventModal"));
     },
 
     searchResultsHandler:function (component, event, helper) {
-        console.log("searchResultsHandler Fired");
         var isScriptLoaded = component.get("v.isScriptLoaded")
 
         if (event.getParam("componentGlobalId") !== undefined) {
-            console.log(event.getParam("componentGlobalId"));
+            var uniqueId = event.getParam("componentGlobalId");
         }
-        var uniqueId = event.getParam("componentGlobalId");
-
         component.makeSearchResultsDraggable = $A.getCallback(function(){
             $(document).ready(function(){
                 var parent = $(document.getElementById(uniqueId));
@@ -20,11 +17,10 @@
                 results.each(function() {
 
                     $(this).data('event', {
-//                        title: $.trim($(this).text()), // use the element's text as the event title
                         title: $(this).data('title'),
 						stick: true, // maintain when user navigates (see docs on the renderEvent method)
                         contactId: $(this).data('sfid'),
-                        relatedTo: $(this).data('objectname')
+                        assignTo: $(this).data('objectname')
                     });
                     
                     // make the event draggable using jQuery UI
@@ -46,10 +42,10 @@
         var action = component.get("c.upsertEvent");
         var scheduledEvent = component.get("v.scheduledEvent");
 
-        if (scheduledEvent.relatedTo == 'Contact')
+        if (scheduledEvent.assignTo == 'Contact')
             scheduledEvent.accountId = null;
 
-        if (scheduledEvent.relatedTo == 'Account')
+        if (scheduledEvent.assignTo == 'Account')
             scheduledEvent.contactId = null;
 
         component.set("v.scheduledEvent", scheduledEvent);
@@ -60,7 +56,7 @@
             if (component.isValid() && state === "SUCCESS") {
                 var returnValue = JSON.parse(response.getReturnValue());
                 if (returnValue.isSuccess) {
-                    component.set('v.ScheduledEvents', returnValue.results.data);
+                    component.set('v.scheduledEvents', returnValue.results.data);
                     $('#calendar').fullCalendar('removeEvents');
                     $('#calendar').fullCalendar('addEventSource', returnValue.results.data);
                     component.get("v.modal").hide();
@@ -83,7 +79,7 @@
             if (component.isValid() && state === "SUCCESS") {
                 var returnValue = JSON.parse(response.getReturnValue());
                 if (returnValue.isSuccess) {
-                    component.set('v.ScheduledEvents', returnValue.results.data);
+                    component.set('v.scheduledEvents', returnValue.results.data);
                     $('#calendar').fullCalendar('removeEvents');
                     $('#calendar').fullCalendar('addEventSource', returnValue.results.data);
                     component.get("v.modal").hide();
@@ -98,90 +94,91 @@
         $A.enqueueAction(action);
     },
 
-    handledayClickEvent: function (cmp, evt, hlp) {
-        cmp.set("v.showDeleteButton", false);
-        var date = evt.getParam("data");
-        hlp.newEventInstance(cmp, date);
+    handledayClickEvent: function (component, event, helper) {
+        component.set("v.showDeleteButton", false);
+        var date = event.getParam("data");
+        helper.newEventInstance(component, date);
         var newModalBody = [
             ["c:addEvent", {
-                scheduledEvent: cmp.getReference("v.scheduledEvent")
+                scheduledEvent: component.getReference("v.scheduledEvent")
             }]
         ];
-        hlp.setModalBody(cmp, newModalBody);
+        helper.setModalBody(component, newModalBody);
     },
 
-    handleEventClick: function (cmp, evt, hlp) {
-        var clickedEvent = evt.getParam("data");
-        cmp.set("v.showDeleteButton", true);
-        var ScheduledEvents = cmp.get("v.ScheduledEvents");
-        ScheduledEvents.forEach(function (ScheduledEvent) {
+    handleEventClick: function (component, event, helper) {
+        var clickedEvent = event.getParam("data");
+        component.set("v.showDeleteButton", true);
+        var scheduledEvents = component.get("v.scheduledEvents");
+        scheduledEvents.forEach(function (ScheduledEvent) {
             if (ScheduledEvent.Id === clickedEvent.Id) {
-                cmp.set("v.scheduledEvent", ScheduledEvent);
+                component.set("v.scheduledEvent", ScheduledEvent);
                 var newModalBody = [
                     ["c:addEvent", {
-                        scheduledEvent: cmp.getReference("v.scheduledEvent"),
+                        scheduledEvent: component.getReference("v.scheduledEvent"),
                     }]
                 ];
-                hlp.setModalBody(cmp, newModalBody);
+                helper.setModalBody(component, newModalBody);
             }
         });
     },
-    handleEventDrop: function (cmp, evt, hlp) {
-        var droppedEvent = evt.getParam("data");
+    handleEventDrop: function (component, event, helper) {
+        var droppedEvent = event.getParam("data");
+        console.log(droppedEvent);
         console.log("handleEventDrop");
-        var ScheduledEvents = cmp.get("v.ScheduledEvents");
-        ScheduledEvents.forEach(function (ScheduledEvent) {
+        var scheduledEvents = component.get("v.scheduledEvents");
+        scheduledEvents.forEach(function (ScheduledEvent) {
             if (ScheduledEvent.Id === droppedEvent.event.Id) {
                 ScheduledEvent.start = moment(droppedEvent.event.start._i).format();
                 ScheduledEvent.end = moment(droppedEvent.event.end._i).format();
-                cmp.set("v.scheduledEvent", ScheduledEvent);
-                hlp.saveEvent(cmp, evt, hlp);
+                component.set("v.scheduledEvent", ScheduledEvent);
+                helper.saveEvent(component, event, helper);
             }
         });
     },
-    handleEventResize: function (cmp, evt, hlp) {
-        var resizedEvent = evt.getParam("data");
+    handleEventResize: function (component, event, helper) {
+        var resizedEvent = event.getParam("data");
         console.log("handleEventResize");
-        var ScheduledEvents = cmp.get("v.ScheduledEvents");
-        ScheduledEvents.forEach(function (ScheduledEvent) {
+        var scheduledEvents = component.get("v.scheduledEvents");
+        scheduledEvents.forEach(function (ScheduledEvent) {
             if (ScheduledEvent.Id === resizedEvent.event.Id) {
                 ScheduledEvent.start = moment(resizedEvent.event.start._i).format();
                 ScheduledEvent.end = moment(resizedEvent.event.end._i).format();
-                cmp.set("v.scheduledEvent", ScheduledEvent);
-                hlp.saveEvent(cmp, evt, hlp);
+                component.set("v.scheduledEvent", ScheduledEvent);
+                helper.saveEvent(component, event, helper);
             }
         });
     },
 
-    handleDrop: function (cmp, evt, hlp) {
+    handleDrop: function (component, event, helper) {
         console.log('handleDrop');
-        var droppedEvent = evt.getParam("data");
-        hlp.newEventInstance(cmp, droppedEvent.date);
-		/*var scheduledEvent = cmp.get("v.scheduledEvent");
+        var droppedEvent = event.getParam("data");
+        helper.newEventInstance(component, droppedEvent.date);
+		/*var scheduledEvent = component.get("v.scheduledEvent");
 		scheduledEvent.contactId = 
 		var newModalBody = [
 			["c:addEvent", {
-				scheduledEvent: cmp.getReference("v.scheduledEvent")
+				scheduledEvent: component.getReference("v.scheduledEvent")
 			}]
 		];
-		hlp.setModalBody(cmp, newModalBody);
+		helper.setModalBody(component, newModalBody);
 */
     },
 
-    handleEventReceive: function (cmp, evt, hlp) {
+    handleEventReceive: function (component, event, helper) {
         console.log('handleEventReceive');
-        var droppedEvent = evt.getParam("data");
-        cmp.set("v.showDeleteButton", false);
-        var scheduledEvent = cmp.get("v.scheduledEvent");
+        var droppedEvent = event.getParam("data");
+        component.set("v.showDeleteButton", false);
+        var scheduledEvent = component.get("v.scheduledEvent");
         scheduledEvent.title = droppedEvent.title;
-        console.log(droppedEvent.relatedTo);
-        scheduledEvent.relatedTo = droppedEvent.relatedTo;
+        console.log(droppedEvent.assignTo);
+        scheduledEvent.assignTo = droppedEvent.assignTo;
 
-        if (scheduledEvent.relatedTo === 'Account'){
+        if (scheduledEvent.assignTo === 'Account'){
             scheduledEvent.accountId = droppedEvent.contactId;
         }
         
-        if (scheduledEvent.relatedTo === 'Contact'){
+        if (scheduledEvent.assignTo === 'Contact'){
             scheduledEvent.contactId = droppedEvent.contactId;
         }
         
@@ -189,16 +186,15 @@
         console.log(scheduledEvent);
         var newModalBody = [
             ["c:addEvent", {
-                scheduledEvent: cmp.getReference("v.scheduledEvent")
+                scheduledEvent: component.getReference("v.scheduledEvent")
             }]
         ];
-        hlp.setModalBody(cmp, newModalBody);
+        helper.setModalBody(component, newModalBody);
     },
-    jsLoaded: function (cmp, evt, hlp) {
-        cmp.set("v.isScriptLoaded",true);
-        // Fetch events and load in calendar
-        cmp.makeSearchResultsDraggable();
-        hlp.getScheduledEvents(cmp);
+    jsLoaded: function (component, event, helper) {
+        component.set("v.isScriptLoaded",true);
+        component.makeSearchResultsDraggable();
+        helper.getScheduledEvents(component);
         $(document).ready(function () {
             $('#calendar').fullCalendar({
                 header: {
@@ -221,7 +217,7 @@
                     function (date, jsEvent, ui, resourceObj) {
                         $A.getCallback(
                             function () {
-                                var messageEvent = cmp.getEvent("dayClickEvent");
+                                var messageEvent = component.getEvent("dayClickEvent");
                                 messageEvent.setParam("data", date);
                                 messageEvent.fire()
                             }
@@ -232,7 +228,7 @@
                     console.log('drop - an event has been dropped!');
                     $A.getCallback(
                         function () {
-                            var messageEvent = cmp.getEvent("drop");
+                            var messageEvent = component.getEvent("drop");
                             messageEvent.setParams({
                                 "data": {
                                     "jsEvent": jsEvent,
@@ -246,7 +242,7 @@
                 eventClick: function (calEvent, jsEvent, view) {
                     $A.getCallback(
                         function () {
-                            var messageEvent = cmp.getEvent("eventClick");
+                            var messageEvent = component.getEvent("eventClick");
                             messageEvent.setParam("data", calEvent);
                             messageEvent.fire()
                         }
@@ -264,7 +260,7 @@
                 eventDrop: function (event, delta, revertFunc) {
                     $A.getCallback(
                         function () {
-                            var messageEvent = cmp.getEvent("eventDrop");
+                            var messageEvent = component.getEvent("eventDrop");
                             messageEvent.setParams({
                                 "data": {
                                     "event": event,
@@ -278,7 +274,7 @@
                 eventResize: function (event, delta, revertFunc) {
                     $A.getCallback(
                         function () {
-                            var messageEvent = cmp.getEvent("eventResize");
+                            var messageEvent = component.getEvent("eventResize");
                             messageEvent.setParams({
                                 "data": {
                                     "event": event,
@@ -293,7 +289,7 @@
                     console.log('event received', event);
                     $A.getCallback(
                         function () {
-                            var messageEvent = cmp.getEvent("eventReceive");
+                            var messageEvent = component.getEvent("eventReceive");
                             messageEvent.setParam("data", event);
                             messageEvent.fire()
                         }
@@ -304,14 +300,14 @@
         });
     },
     handleClickCancelModal: function (component, event, helper) {
-        var ScheduledEvents = component.get("v.ScheduledEvents");
+        var scheduledEvents = component.get("v.scheduledEvents");
         $('#calendar').fullCalendar('removeEvents');
-        $('#calendar').fullCalendar('addEventSource', ScheduledEvents);
+        $('#calendar').fullCalendar('addEventSource', scheduledEvents);
         component.get("v.modal").hide();
     },
     handleClickX: function (component, event, helper) {
-        var ScheduledEvents = component.get("v.ScheduledEvents");
+        var scheduledEvents = component.get("v.scheduledEvents");
         $('#calendar').fullCalendar('removeEvents');
-        $('#calendar').fullCalendar('addEventSource', ScheduledEvents);
+        $('#calendar').fullCalendar('addEventSource', scheduledEvents);
     }
 })
