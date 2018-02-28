@@ -1,9 +1,14 @@
 <aura:component>
     <aura:attribute access="public" name="scheduledEvent" type="Object" required="true" />
     <aura:attribute access="public" name="assignToOptions" type="String[]" default="Contact,Account"/>
+    <aura:attribute access="public" name="isValid" type="Boolean" default="false"/>
+    
+    <aura:method access="public" name="validate" action="{!c.validate}">
+    </aura:method>
 
     <div class="slds-form slds-form_stacked" id="add-event-form">
-        <ui:inputText aura:id="title" label="Title" value="{!v.scheduledEvent.title}" required="true" />
+        <lightning:input required="true" aura:id="title" name="Title" label="Title" value="{!v.scheduledEvent.title}" messageWhenValueMissing="Title is required!"/>
+
         <lightning:layout class="slds-m-vertical_medium">
                 <lightning:layoutitem flexibility="grow" class="right-padding">
                         <lightning:select name="assignToSelector" label="Assign To" value="{!v.scheduledEvent.assignTo}" >
@@ -18,25 +23,21 @@
             <aura:if isTrue="{!v.scheduledEvent.assignTo == 'Contact' }">
                     <c:strike_lookup aura:id="contactLookup" label="Contact:" object="Contact" value="{!v.scheduledEvent.contactId}" valueSublabel="{!v.selectedAccountName}"
                     searchField="Name" placeholder="Please enter minimum of two characters" iconName="standard:contact" subtitleField="Account.Name"
-                    order="Name" limit="5" loadingMessage="Loading..." required="true" errorMessage="Invalid input" showRecentRecords="true" allowNewRecords="true"
+                    order="Name" limit="5" loadingMessage="Loading..." required="true" errorMessage="Contact is required" showRecentRecords="true" allowNewRecords="true"
                 />
             </aura:if>
 
             <aura:if isTrue="{!v.scheduledEvent.assignTo == 'Account' }">
                     <c:strike_lookup aura:id="accountLookup" label="Account:" object="Account" value="{!v.scheduledEvent.accountId}" 
                     searchField="Name" placeholder="Please enter minimum of two characters" iconName="standard:account" 
-                    order="Name" limit="5" loadingMessage="Loading..." required="true" errorMessage="Invalid input" showRecentRecords="true" allowNewRecords="true"
+                    order="Name" limit="5" loadingMessage="Loading..." required="true" errorMessage="Account is required" showRecentRecords="true" allowNewRecords="true"
                 />
                             
             </aura:if>
 </lightning:layoutitem>
 </lightning:layout>
         <ui:inputTextArea aura:id="description" label="Description" value="{!v.scheduledEvent.description}" rows="5" />
-
-        <ui:inputDateTime aura:id="startTime" label="Start Time" value="{!v.scheduledEvent.start}" displayDatePicker="true" required="true"
-        />
-
-        <ui:inputDateTime aura:id="endTime" label="End Time" value="{!v.scheduledEvent.end}" displayDatePicker="true" required="true"
-        />
+        <ui:inputDateTime aura:id="startTime" label="Start Time" value="{!v.scheduledEvent.start}" displayDatePicker="true" required="true"/>
+        <ui:inputDateTime aura:id="endTime" label="End Time" value="{!v.scheduledEvent.end}" displayDatePicker="true" required="true" />
     </div>
 </aura:component>

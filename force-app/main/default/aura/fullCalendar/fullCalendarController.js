@@ -3,7 +3,7 @@
         component.set("v.modal", component.find("newEventModal"));
     },
 
-    searchResultsHandler:function (component, event, helper) {
+    searchResultsAvailablesHandler:function (component, event, helper) {
         var isScriptLoaded = component.get("v.isScriptLoaded")
 
         if (event.getParam("componentGlobalId") !== undefined) {
@@ -19,8 +19,8 @@
                     $(this).data('event', {
                         title: $(this).data('title'),
 						stick: true, // maintain when user navigates (see docs on the renderEvent method)
-                        contactId: $(this).data('sfid'),
-                        assignTo: $(this).data('objectname')
+                        salesforceId: $(this).data('sfid'),
+                        assignTo: $(this).data('object')
                     });
                     
                     // make the event draggable using jQuery UI
@@ -39,36 +39,42 @@
     },
 
     handleClickSave: function (component, event, helper) {
-        var action = component.get("c.upsertEvent");
-        var scheduledEvent = component.get("v.scheduledEvent");
+        component.get("v.addEventComponent").validate();
+        if (component.get("v.addEventComponent").get("v.isValid")) {
 
-        if (scheduledEvent.assignTo == 'Contact')
-            scheduledEvent.accountId = null;
+            var action = component.get("c.upsertEvent");
+            var scheduledEvent = component.get("v.scheduledEvent");
 
-        if (scheduledEvent.assignTo == 'Account')
-            scheduledEvent.contactId = null;
+            if (scheduledEvent.assignTo == 'Contact')
+                scheduledEvent.accountId = null;
 
-        component.set("v.scheduledEvent", scheduledEvent);
+            if (scheduledEvent.assignTo == 'Account')
+                scheduledEvent.contactId = null;
 
-        action.setParam("jsonString", JSON.stringify(component.get("v.scheduledEvent")));
-        action.setCallback(this, function (response) {
-            var state = response.getState();
-            if (component.isValid() && state === "SUCCESS") {
-                var returnValue = JSON.parse(response.getReturnValue());
-                if (returnValue.isSuccess) {
-                    component.set('v.scheduledEvents', returnValue.results.data);
-                    $('#calendar').fullCalendar('removeEvents');
-                    $('#calendar').fullCalendar('addEventSource', returnValue.results.data);
-                    component.get("v.modal").hide();
+            component.set("v.scheduledEvent", scheduledEvent);
+
+            action.setParam("jsonString", JSON.stringify(component.get("v.scheduledEvent")));
+            action.setCallback(this, function (response) {
+                var state = response.getState();
+                if (component.isValid() && state === "SUCCESS") {
+                    var returnValue = JSON.parse(response.getReturnValue());
+                    if (returnValue.isSuccess) {
+                        component.set('v.scheduledEvents', returnValue.results.data);
+                        $('#calendar').fullCalendar('removeEvents');
+                        $('#calendar').fullCalendar('addEventSource', returnValue.results.data);
+                        component.get("v.modal").hide();
+                    }
                 }
-            }
-            else if (component.isValid() && state === "ERROR") {
-                component.find('toaster').show('Failed!', 'failure', 'There was a problem logging your Event. Please contact HelpDesk.');
-            }
-            component.find("spinner").hide();
-        });
-        component.find("spinner").show();
-        $A.enqueueAction(action);
+                else if (component.isValid() && state === "ERROR") {
+                    component.find('toaster').show('Failed!', 'failure', 'There was a problem logging your Event. Please contact HelpDesk.');
+                }
+                component.find("spinner").hide();
+            });
+            component.find("spinner").show();
+            $A.enqueueAction(action);
+        }
+        
+        
     },
 
     handleClickDeleteModal: function (component, event, helper) {
@@ -154,15 +160,6 @@
         console.log('handleDrop');
         var droppedEvent = event.getParam("data");
         helper.newEventInstance(component, droppedEvent.date);
-		/*var scheduledEvent = component.get("v.scheduledEvent");
-		scheduledEvent.contactId = 
-		var newModalBody = [
-			["c:addEvent", {
-				scheduledEvent: component.getReference("v.scheduledEvent")
-			}]
-		];
-		helper.setModalBody(component, newModalBody);
-*/
     },
 
     handleEventReceive: function (component, event, helper) {
@@ -175,11 +172,11 @@
         scheduledEvent.assignTo = droppedEvent.assignTo;
 
         if (scheduledEvent.assignTo === 'Account'){
-            scheduledEvent.accountId = droppedEvent.contactId;
+            scheduledEvent.accountId = droppedEvent.salesforceId;
         }
         
         if (scheduledEvent.assignTo === 'Contact'){
-            scheduledEvent.contactId = droppedEvent.contactId;
+            scheduledEvent.contactId = droppedEvent.salesforceId;
         }
         
 
@@ -211,6 +208,7 @@
                 selectable: true,
                 selectHelper: true,
                 eventLimit: true, // allow "more" link when too many events
+                allDaySlot:false,
                 events: [],
                 // Callbacks
                 dayClick:

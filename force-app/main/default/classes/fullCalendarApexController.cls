@@ -155,7 +155,7 @@ public class fullCalendarApexController {
                 data.add(new Map < String, Object >  {
                         'label' => obj.get('Name'), 
                         'value' => obj.get('Id'),
-                        'objectName'=> objectName
+                        'object'=> objectName
                         }); 
                 }
         

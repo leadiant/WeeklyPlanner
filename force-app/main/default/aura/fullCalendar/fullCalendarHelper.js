@@ -4,7 +4,7 @@
 		var endDateTime;
 		var allDayEvent = false;
 
-		var m = $.fullCalendar.moment(date);
+		/*var m = $.fullCalendar.moment(date);
 		console.log(date._f);
 		console.log(m.hasTime());
 
@@ -17,16 +17,16 @@
 			startDateTime = moment(date.format()).add(12, 'hours').format();
 			endDateTime = moment(date.format()).add(24, 'hours').format();
 			allDayEvent = true;
-		}
+		}*/
 
-	/*	if (date._f == "YYYY-MM-DD"){
+		if (date._f == "YYYY-MM-DD"){
 			startDateTime = moment(date.format()).add(12, 'hours').format();
 			endDateTime = moment(date.format()).add(14, 'hours').format();
 		} else {
 			startDateTime = moment(date.format()).format();
 			endDateTime = moment(date.format()).add(2, 'hours').format();
 		}
-*/
+
 		var scheduledEvent = {
 			Id:null,
 			contactId: null,

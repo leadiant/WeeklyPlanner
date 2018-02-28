@@ -8,12 +8,11 @@
             $Resource.fullCalendar + '/lib/fullcalendar.min.js')}" afterScriptsLoaded="{!c.jsLoaded}" />
 
     <!-- ATTRIBUTES -->
-    <aura:attribute name="scheduledEvents" type="Object[]" />
     <aura:attribute name="modal" type="Aura.Component" />
     <aura:attribute name="addEventComponent" type="Aura.Component" />
     <aura:attribute name="scheduledEvent" access="private"  type="Object" default="{}" />
+    <aura:attribute name="scheduledEvents" type="Object[]" />
     <aura:attribute name="showDeleteButton" type="Boolean" default="{!false}" access="private" />
-
     <aura:attribute name="isScriptLoaded" type="Boolean" default="{!false}" access="private"/>
 
     <!-- DEPENDENCIES -->
@@ -35,10 +34,8 @@
     <aura:handler name="drop" event="c:strike_evt" action="{!c.handleDrop}" />
     <aura:registerEvent name="eventReceive" type="c:strike_evt" />
     <aura:handler name="eventReceive" event="c:strike_evt" action="{!c.handleEventReceive}" />
-
     <aura:handler name="strike_evt_modalCloseButtonClicked" event="c:strike_evt" action="{!c.handleClickX}" />
-
-    <aura:handler event="c:SearchResults" action="{!c.searchResultsHandler}"/>
+    <aura:handler event="c:searchResultsAvailable" action="{!c.searchResultsAvailablesHandler}"/>
 
     <div aura:id="container">
         <div id="calendar" class="anyCalendar">

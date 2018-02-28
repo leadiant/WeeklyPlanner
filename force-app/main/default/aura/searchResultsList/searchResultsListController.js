@@ -1,6 +1,6 @@
 ({
     doInit: function(component, event, helper) {
-        helper.loadRecords(component);
+        helper.getResults(component);
     },
 
     onPreviousPage: function(component, event, helper) {
@@ -8,7 +8,7 @@
         page = page - 1;
         component.set("v.requestedPage", page);
         
-        helper.loadRecords(component);
+        helper.getResults(component);
 
 	},
 
@@ -16,7 +16,7 @@
 		var page = component.get("v.page") || 1;
         page = page + 1;
         component.set("v.requestedPage", page);
-        helper.loadRecords(component);
+        helper.getResults(component);
 	},
 
     filterChangeHandler: function(component, event, helper) {
@@ -27,7 +27,20 @@
             component.set('v.object',event.getParam("category"));
             component.set("v.requestedPage", 1);
         }
-        helper.loadRecords(component);
+        helper.getResults(component);
     },
+
+    createNewRecord : function(component, event, helper) {
+		// Get sObjectType
+		var button = event.getSource();
+		var sObjectType = button.get('v.name');
+
+		// Launch standard create page in one/one.app container
+		var createRecordEvent = $A.get('e.force:createRecord');
+		createRecordEvent.setParams({
+			"entityApiName": sObjectType
+		});
+		createRecordEvent.fire();
+	},
 
 })

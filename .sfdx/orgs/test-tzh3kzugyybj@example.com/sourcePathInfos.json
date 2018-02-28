@@ -50,9 +50,9 @@
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura",
             "isDirectory": true,
             "size": 0,
-            "modifiedTime": 1519270142802,
-            "changeTime": 1519270142802,
-            "contentHash": "4efd941e9264edf078db34f39159ffae2eb8eb00",
+            "modifiedTime": 1519843202613,
+            "changeTime": 1519843202613,
+            "contentHash": "915c31edd80e10b732f4346cb4dfb787db0532f1",
             "isMetadataFile": false,
             "state": "u",
             "isWorkspace": false
@@ -623,14 +623,14 @@
     [
         "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\addEvent\\addEvent.cmp",
         {
+            "state": "u",
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\addEvent\\addEvent.cmp",
             "isDirectory": false,
-            "size": 2677,
-            "modifiedTime": 1519763024728,
-            "changeTime": 1519763024728,
-            "contentHash": "f2671917be0392b13be5f29e628d4ddfc26e6aea",
             "isMetadataFile": false,
-            "state": "u"
+            "size": 2912,
+            "modifiedTime": 1519850157465,
+            "changeTime": 1519850157465,
+            "contentHash": "98ae33535add4bf0bebe1df20b5cfe65d7c62e51"
         }
     ],
     [
@@ -690,10 +690,10 @@
         {
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\addEvent\\addEventController.js",
             "isDirectory": false,
-            "size": 65,
-            "modifiedTime": 1517945393240,
-            "changeTime": 1517945393240,
-            "contentHash": "194250e0c86b1981f8d4e7246be6b32954c6deaf",
+            "size": 1207,
+            "modifiedTime": 1519849989927,
+            "changeTime": 1519849989927,
+            "contentHash": "1e4d4fead3d5677f58490761c5117f16b39f132f",
             "isMetadataFile": false,
             "state": "u"
         }
@@ -703,10 +703,10 @@
         {
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\addEvent\\addEventHelper.js",
             "isDirectory": false,
-            "size": 45,
-            "modifiedTime": 1517945393243,
-            "changeTime": 1517945393243,
-            "contentHash": "fa35ebecd73c127729bf311a95b613f711a6f10b",
+            "size": 438,
+            "modifiedTime": 1519848336441,
+            "changeTime": 1519848196501,
+            "contentHash": "b4d27f4e55ccaf6d1884fd8f798e641040958416",
             "isMetadataFile": false,
             "state": "u"
         }
@@ -1496,10 +1496,10 @@
         {
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\classes\\fullCalendarApexController.cls",
             "isDirectory": false,
-            "size": 7013,
-            "modifiedTime": 1519762914759,
-            "changeTime": 1519762914759,
-            "contentHash": "06abe05261dc3098ade7ce654f46158ce0263812",
+            "size": 7009,
+            "modifiedTime": 1519844209243,
+            "changeTime": 1519843992854,
+            "contentHash": "b9a67febe2b93dac0db9fcf24f982b3ab8393df6",
             "isMetadataFile": false,
             "state": "u"
         }
@@ -1791,45 +1791,6 @@
         }
     ],
     [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\FilterChange",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\FilterChange",
-            "isDirectory": true,
-            "size": 0,
-            "modifiedTime": 1519246824504,
-            "changeTime": 1519246824521,
-            "contentHash": "6fa4e679ec1c7ac3f9a59ea24a258fe5ae01ae8b",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\FilterChange\\FilterChange.evt",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\FilterChange\\FilterChange.evt",
-            "isDirectory": false,
-            "size": 180,
-            "modifiedTime": 1519246503534,
-            "changeTime": 1519246805553,
-            "contentHash": "c9c397af86ef581051a991044b4b69a50158b1f5",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\FilterChange\\FilterChange.evt-meta.xml",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\FilterChange\\FilterChange.evt-meta.xml",
-            "isDirectory": false,
-            "size": 240,
-            "modifiedTime": 1519246497006,
-            "changeTime": 1519246805553,
-            "contentHash": "7fffe7c6400b8afd364fd87e790311070f13e5a2",
-            "isMetadataFile": true,
-            "state": "u"
-        }
-    ],
-    [
         "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\CategorySelector",
         {
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\CategorySelector",
@@ -1954,136 +1915,6 @@
             "size": 50,
             "modifiedTime": 1519246162532,
             "changeTime": 1519246805537,
-            "contentHash": "8b79b016f08440c9b2f7d706a6d21229c854540b",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\Filter",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\Filter",
-            "isDirectory": true,
-            "size": 0,
-            "modifiedTime": 1519247074961,
-            "changeTime": 1519247074993,
-            "contentHash": "de0720702e0d6d7741a36ac877ad283145094457",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\Filter\\Filter.auradoc",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\Filter\\Filter.auradoc",
-            "isDirectory": false,
-            "size": 209,
-            "modifiedTime": 1519246451810,
-            "changeTime": 1519246778721,
-            "contentHash": "fd7f560d82324d6a8255c8c6ebf60698f5f93f1e",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\Filter\\Filter.cmp",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\Filter\\Filter.cmp",
-            "isDirectory": false,
-            "size": 696,
-            "modifiedTime": 1519421083644,
-            "changeTime": 1519421083645,
-            "contentHash": "04b36465b428c5c8b994cbe5c31aa04bba4b1a71",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\Filter\\Filter.cmp-meta.xml",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\Filter\\Filter.cmp-meta.xml",
-            "isDirectory": false,
-            "size": 238,
-            "modifiedTime": 1519246451779,
-            "changeTime": 1519246778721,
-            "contentHash": "2476f3a17d52b037a249c5d77036ef7046003e69",
-            "isMetadataFile": true,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\Filter\\Filter.css",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\Filter\\Filter.css",
-            "isDirectory": false,
-            "size": 209,
-            "modifiedTime": 1519421123057,
-            "changeTime": 1519421123058,
-            "contentHash": "a3a2072d76e8f26db5d715cb311b84367f07eb98",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\Filter\\Filter.design",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\Filter\\Filter.design",
-            "isDirectory": false,
-            "size": 40,
-            "modifiedTime": 1519246451813,
-            "changeTime": 1519246778721,
-            "contentHash": "c5618bc7228e29c74b07b78fd040e05ae8a541ec",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\Filter\\Filter.svg",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\Filter\\Filter.svg",
-            "isDirectory": false,
-            "size": 661,
-            "modifiedTime": 1519246451804,
-            "changeTime": 1519246778721,
-            "contentHash": "721eeffe17135535c3834b77f1e1968fe6360ed4",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\Filter\\FilterController.js",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\Filter\\FilterController.js",
-            "isDirectory": false,
-            "size": 512,
-            "modifiedTime": 1519247791431,
-            "changeTime": 1519247791431,
-            "contentHash": "736810deae5fe8de233bfebbfa4b4e9740a476ba",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\Filter\\FilterHelper.js",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\Filter\\FilterHelper.js",
-            "isDirectory": false,
-            "size": 45,
-            "modifiedTime": 1519246451797,
-            "changeTime": 1519246778721,
-            "contentHash": "fa35ebecd73c127729bf311a95b613f711a6f10b",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\Filter\\FilterRenderer.js",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\Filter\\FilterRenderer.js",
-            "isDirectory": false,
-            "size": 50,
-            "modifiedTime": 1519246451802,
-            "changeTime": 1519246778721,
             "contentHash": "8b79b016f08440c9b2f7d706a6d21229c854540b",
             "isMetadataFile": false,
             "state": "u"
@@ -2259,266 +2090,6 @@
         }
     ],
     [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList",
-            "isDirectory": true,
-            "size": 0,
-            "modifiedTime": 1519760879497,
-            "changeTime": 1519248592720,
-            "contentHash": "1957514769e6cdd0dab0bd11dbf2959a2180006f",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectTile",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectTile",
-            "isDirectory": true,
-            "size": 0,
-            "modifiedTime": 1519248220499,
-            "changeTime": 1519248220499,
-            "contentHash": "c66bce944bbdc160dc0d5f07471a70d6e52a6290",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList\\sObjectList.auradoc",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList\\sObjectList.auradoc",
-            "isDirectory": false,
-            "size": 209,
-            "modifiedTime": 1519248592719,
-            "changeTime": 1519248592719,
-            "contentHash": "fd7f560d82324d6a8255c8c6ebf60698f5f93f1e",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList\\sObjectList.cmp",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList\\sObjectList.cmp",
-            "isDirectory": false,
-            "size": 1778,
-            "modifiedTime": 1519760879491,
-            "changeTime": 1519760879491,
-            "contentHash": "a7be9552e3a3b12a75b2b61d2229605938fa4c23",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList\\sObjectList.cmp-meta.xml",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList\\sObjectList.cmp-meta.xml",
-            "isDirectory": false,
-            "size": 243,
-            "modifiedTime": 1519248592703,
-            "changeTime": 1519248592703,
-            "contentHash": "f0966bfc927e682ef48e78e6794c13c77003fd99",
-            "isMetadataFile": true,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList\\sObjectList.css",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList\\sObjectList.css",
-            "isDirectory": false,
-            "size": 120,
-            "modifiedTime": 1519335877470,
-            "changeTime": 1519335877470,
-            "contentHash": "3649d799174d016265a21cec834daff894a76199",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList\\sObjectList.design",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList\\sObjectList.design",
-            "isDirectory": false,
-            "size": 40,
-            "modifiedTime": 1519248592722,
-            "changeTime": 1519248592722,
-            "contentHash": "c5618bc7228e29c74b07b78fd040e05ae8a541ec",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList\\sObjectList.svg",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList\\sObjectList.svg",
-            "isDirectory": false,
-            "size": 661,
-            "modifiedTime": 1519248592717,
-            "changeTime": 1519248592717,
-            "contentHash": "721eeffe17135535c3834b77f1e1968fe6360ed4",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList\\sObjectListController.js",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList\\sObjectListController.js",
-            "isDirectory": false,
-            "size": 998,
-            "modifiedTime": 1519761217990,
-            "changeTime": 1519761217990,
-            "contentHash": "755ca1881b3c80154f6c182eefdaf3100cc3212b",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList\\sObjectListHelper.js",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList\\sObjectListHelper.js",
-            "isDirectory": false,
-            "size": 2156,
-            "modifiedTime": 1519761190432,
-            "changeTime": 1519761190432,
-            "contentHash": "10711ad35fe211158283e7ae182c8305c3aad5d8",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList\\sObjectListRenderer.js",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectList\\sObjectListRenderer.js",
-            "isDirectory": false,
-            "size": 50,
-            "modifiedTime": 1519248592715,
-            "changeTime": 1519248592715,
-            "contentHash": "8b79b016f08440c9b2f7d706a6d21229c854540b",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectTile\\sObjectTile.auradoc",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectTile\\sObjectTile.auradoc",
-            "isDirectory": false,
-            "size": 209,
-            "modifiedTime": 1519248220498,
-            "changeTime": 1519248220498,
-            "contentHash": "fd7f560d82324d6a8255c8c6ebf60698f5f93f1e",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectTile\\sObjectTile.cmp",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectTile\\sObjectTile.cmp",
-            "isDirectory": false,
-            "size": 1344,
-            "modifiedTime": 1519759764914,
-            "changeTime": 1519421820501,
-            "contentHash": "5f124d65d1a7a4012a0ff7611699162780cea1f1",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectTile\\sObjectTile.cmp-meta.xml",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectTile\\sObjectTile.cmp-meta.xml",
-            "isDirectory": false,
-            "size": 243,
-            "modifiedTime": 1519248220481,
-            "changeTime": 1519248220481,
-            "contentHash": "43c83c79d2fbe64f87ae4e7d11a88df35c81ec5e",
-            "isMetadataFile": true,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectTile\\sObjectTile.css",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectTile\\sObjectTile.css",
-            "isDirectory": false,
-            "size": 364,
-            "modifiedTime": 1519421295403,
-            "changeTime": 1519421295403,
-            "contentHash": "d2486a4e2e05016d795de19de52556a50accb84c",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectTile\\sObjectTile.design",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectTile\\sObjectTile.design",
-            "isDirectory": false,
-            "size": 40,
-            "modifiedTime": 1519248220500,
-            "changeTime": 1519248220500,
-            "contentHash": "c5618bc7228e29c74b07b78fd040e05ae8a541ec",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectTile\\sObjectTile.svg",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectTile\\sObjectTile.svg",
-            "isDirectory": false,
-            "size": 661,
-            "modifiedTime": 1519248220496,
-            "changeTime": 1519248220496,
-            "contentHash": "721eeffe17135535c3834b77f1e1968fe6360ed4",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectTile\\sObjectTileController.js",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectTile\\sObjectTileController.js",
-            "isDirectory": false,
-            "size": 65,
-            "modifiedTime": 1519248220486,
-            "changeTime": 1519248220486,
-            "contentHash": "194250e0c86b1981f8d4e7246be6b32954c6deaf",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectTile\\sObjectTileHelper.js",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectTile\\sObjectTileHelper.js",
-            "isDirectory": false,
-            "size": 45,
-            "modifiedTime": 1519248220488,
-            "changeTime": 1519248220488,
-            "contentHash": "fa35ebecd73c127729bf311a95b613f711a6f10b",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectTile\\sObjectTileRenderer.js",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\sObjectTile\\sObjectTileRenderer.js",
-            "isDirectory": false,
-            "size": 50,
-            "modifiedTime": 1519248220493,
-            "changeTime": 1519248220493,
-            "contentHash": "8b79b016f08440c9b2f7d706a6d21229c854540b",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
         "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\fullCalendar",
         {
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\fullCalendar",
@@ -2549,10 +2120,10 @@
         {
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\fullCalendar\\fullCalendar.cmp",
             "isDirectory": false,
-            "size": 3540,
-            "modifiedTime": 1519763179776,
-            "changeTime": 1519763179776,
-            "contentHash": "8f3782710105187052daa2f4393e2b69fd2b3a7d",
+            "size": 3553,
+            "modifiedTime": 1519846674812,
+            "changeTime": 1519846674814,
+            "contentHash": "b0e38f4d148957582466c530a055bb1de4195ab7",
             "isMetadataFile": false,
             "state": "u"
         }
@@ -2612,27 +2183,27 @@
     [
         "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\fullCalendar\\fullCalendarController.js",
         {
+            "state": "u",
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\fullCalendar\\fullCalendarController.js",
             "isDirectory": false,
-            "size": 13703,
-            "modifiedTime": 1519765163980,
-            "changeTime": 1519765163980,
-            "contentHash": "dafdb8acdfc39581f413215af52cf27ff3908345",
             "isMetadataFile": false,
-            "state": "u"
+            "size": 13751,
+            "modifiedTime": 1519851567263,
+            "changeTime": 1519851567259,
+            "contentHash": "b5fc88b981b3dfb7556f0c1f4819e2b006fa08d4"
         }
     ],
     [
         "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\fullCalendar\\fullCalendarHelper.js",
         {
-            "state": "u",
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\fullCalendar\\fullCalendarHelper.js",
             "isDirectory": false,
-            "isMetadataFile": false,
             "size": 3186,
-            "modifiedTime": 1519767695977,
-            "changeTime": 1519767695977,
-            "contentHash": "c7707647af062a458b514570c782a20b48ecd014"
+            "modifiedTime": 1519847222057,
+            "changeTime": 1519847222059,
+            "contentHash": "f394bc33b68493bc89fa53bab4e7949fa382aad6",
+            "isMetadataFile": false,
+            "state": "u"
         }
     ],
     [
@@ -2649,45 +2220,6 @@
         }
     ],
     [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\SearchResults",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\SearchResults",
-            "isDirectory": true,
-            "size": 0,
-            "modifiedTime": 1519270142806,
-            "changeTime": 1519270142806,
-            "contentHash": "45de033d8b67024f4a12d4d0cfa6997c8877841f",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\SearchResults\\SearchResults.evt",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\SearchResults\\SearchResults.evt",
-            "isDirectory": false,
-            "size": 136,
-            "modifiedTime": 1519270665180,
-            "changeTime": 1519270665180,
-            "contentHash": "48f591c05256ea693e6a3e07bde53c97899ca401",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\SearchResults\\SearchResults.evt-meta.xml",
-        {
-            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\SearchResults\\SearchResults.evt-meta.xml",
-            "isDirectory": false,
-            "size": 241,
-            "modifiedTime": 1519270142807,
-            "changeTime": 1519270142807,
-            "contentHash": "b5d510f24ab47e5ad621df006d1dcae037507e47",
-            "isMetadataFile": true,
-            "state": "u"
-        }
-    ],
-    [
         "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\staticresources\\fullCalendar\\lib\\calendar.js",
         {
             "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\staticresources\\fullCalendar\\lib\\calendar.js",
@@ -2696,6 +2228,474 @@
             "modifiedTime": 1519762914759,
             "changeTime": 1519762914759,
             "contentHash": "6fa37174587d6d32d7838e0fc90243a00f945ab1",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilter",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilter",
+            "isDirectory": true,
+            "size": 0,
+            "modifiedTime": 1519841719981,
+            "changeTime": 1519841719981,
+            "contentHash": "1bfebec99812b9a7de3b2e326292456367cc769e",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilterChange",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilterChange",
+            "isDirectory": true,
+            "size": 0,
+            "modifiedTime": 1519841858084,
+            "changeTime": 1519841858084,
+            "contentHash": "27365e09b843736886e7d5177faeaf4e5048bf99",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsAvailable",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsAvailable",
+            "isDirectory": true,
+            "size": 0,
+            "modifiedTime": 1519842370970,
+            "changeTime": 1519842370970,
+            "contentHash": "55720c6ba2439d5798bd8abeaebcf48af658c06c",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsList",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsList",
+            "isDirectory": true,
+            "size": 0,
+            "modifiedTime": 1519842455570,
+            "changeTime": 1519842455570,
+            "contentHash": "ffc69d860d7bde303cfd7f216f9ea5c0ceabc31f",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsTile",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsTile",
+            "isDirectory": true,
+            "size": 0,
+            "modifiedTime": 1519842793429,
+            "changeTime": 1519842793429,
+            "contentHash": "f0b46f36f9833efe0a779c4c1084e0404dd56cec",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilter\\searchFilter.auradoc",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilter\\searchFilter.auradoc",
+            "isDirectory": false,
+            "size": 209,
+            "modifiedTime": 1519841719980,
+            "changeTime": 1519841719980,
+            "contentHash": "fd7f560d82324d6a8255c8c6ebf60698f5f93f1e",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilter\\searchFilter.cmp",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilter\\searchFilter.cmp",
+            "isDirectory": false,
+            "size": 708,
+            "modifiedTime": 1519841907266,
+            "changeTime": 1519841907266,
+            "contentHash": "a611701ef0cbd4458825333b0fbef670d8086f9f",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilter\\searchFilter.cmp-meta.xml",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilter\\searchFilter.cmp-meta.xml",
+            "isDirectory": false,
+            "size": 244,
+            "modifiedTime": 1519841719956,
+            "changeTime": 1519841719956,
+            "contentHash": "e93c16d4553a806135c55e8728ee68432fa2fc0b",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilter\\searchFilter.css",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilter\\searchFilter.css",
+            "isDirectory": false,
+            "size": 164,
+            "modifiedTime": 1519842467742,
+            "changeTime": 1519842467742,
+            "contentHash": "6d2d72d11e895b0c201c34fef85e797ac61f9cca",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilter\\searchFilter.design",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilter\\searchFilter.design",
+            "isDirectory": false,
+            "size": 40,
+            "modifiedTime": 1519841719985,
+            "changeTime": 1519841719985,
+            "contentHash": "c5618bc7228e29c74b07b78fd040e05ae8a541ec",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilter\\searchFilter.svg",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilter\\searchFilter.svg",
+            "isDirectory": false,
+            "size": 661,
+            "modifiedTime": 1519841719978,
+            "changeTime": 1519841719978,
+            "contentHash": "721eeffe17135535c3834b77f1e1968fe6360ed4",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilter\\searchFilterController.js",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilter\\searchFilterController.js",
+            "isDirectory": false,
+            "size": 524,
+            "modifiedTime": 1519842471193,
+            "changeTime": 1519842471193,
+            "contentHash": "f273fece307f243a1233a9d8b8b86baa46afb7b6",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilter\\searchFilterHelper.js",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilter\\searchFilterHelper.js",
+            "isDirectory": false,
+            "size": 45,
+            "modifiedTime": 1519841719970,
+            "changeTime": 1519841719970,
+            "contentHash": "fa35ebecd73c127729bf311a95b613f711a6f10b",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilter\\searchFilterRenderer.js",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilter\\searchFilterRenderer.js",
+            "isDirectory": false,
+            "size": 50,
+            "modifiedTime": 1519841719975,
+            "changeTime": 1519841719975,
+            "contentHash": "8b79b016f08440c9b2f7d706a6d21229c854540b",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilterChange\\searchFilterChange.evt",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilterChange\\searchFilterChange.evt",
+            "isDirectory": false,
+            "size": 180,
+            "modifiedTime": 1519841881850,
+            "changeTime": 1519841881850,
+            "contentHash": "c9c397af86ef581051a991044b4b69a50158b1f5",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilterChange\\searchFilterChange.evt-meta.xml",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchFilterChange\\searchFilterChange.evt-meta.xml",
+            "isDirectory": false,
+            "size": 246,
+            "modifiedTime": 1519841858086,
+            "changeTime": 1519841858086,
+            "contentHash": "ff3ddf152b97e50d2bbad65ad3c7644c8cb00045",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsAvailable\\searchResultsAvailable.evt",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsAvailable\\searchResultsAvailable.evt",
+            "isDirectory": false,
+            "size": 136,
+            "modifiedTime": 1519842468775,
+            "changeTime": 1519842468775,
+            "contentHash": "48f591c05256ea693e6a3e07bde53c97899ca401",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsAvailable\\searchResultsAvailable.evt-meta.xml",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsAvailable\\searchResultsAvailable.evt-meta.xml",
+            "isDirectory": false,
+            "size": 250,
+            "modifiedTime": 1519842370971,
+            "changeTime": 1519842370971,
+            "contentHash": "7aafc217cb0b073314e25ca6bd6af5c0f530c3bc",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsList\\searchResultsList.auradoc",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsList\\searchResultsList.auradoc",
+            "isDirectory": false,
+            "size": 209,
+            "modifiedTime": 1519842455569,
+            "changeTime": 1519842455569,
+            "contentHash": "fd7f560d82324d6a8255c8c6ebf60698f5f93f1e",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsList\\searchResultsList.cmp",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsList\\searchResultsList.cmp",
+            "isDirectory": false,
+            "size": 2181,
+            "modifiedTime": 1519845160219,
+            "changeTime": 1519845160219,
+            "contentHash": "8a4ba81ffd32875cb071b8a3a2d1bda64c8bc921",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsList\\searchResultsList.cmp-meta.xml",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsList\\searchResultsList.cmp-meta.xml",
+            "isDirectory": false,
+            "size": 249,
+            "modifiedTime": 1519842455543,
+            "changeTime": 1519842455543,
+            "contentHash": "7e033f21555e267e4d4ab53bab402c35b36e41e2",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsList\\searchResultsList.css",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsList\\searchResultsList.css",
+            "isDirectory": false,
+            "size": 120,
+            "modifiedTime": 1519842581845,
+            "changeTime": 1519842581845,
+            "contentHash": "3649d799174d016265a21cec834daff894a76199",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsList\\searchResultsList.design",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsList\\searchResultsList.design",
+            "isDirectory": false,
+            "size": 40,
+            "modifiedTime": 1519842455572,
+            "changeTime": 1519842455572,
+            "contentHash": "c5618bc7228e29c74b07b78fd040e05ae8a541ec",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsList\\searchResultsList.svg",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsList\\searchResultsList.svg",
+            "isDirectory": false,
+            "size": 661,
+            "modifiedTime": 1519842455567,
+            "changeTime": 1519842455567,
+            "contentHash": "721eeffe17135535c3834b77f1e1968fe6360ed4",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsList\\searchResultsListController.js",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsList\\searchResultsListController.js",
+            "isDirectory": false,
+            "size": 1338,
+            "modifiedTime": 1519844962523,
+            "changeTime": 1519844962523,
+            "contentHash": "abba343fea614c877dbe16d752863942f694d3f0",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsList\\searchResultsListHelper.js",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsList\\searchResultsListHelper.js",
+            "isDirectory": false,
+            "size": 2130,
+            "modifiedTime": 1519844406890,
+            "changeTime": 1519844406890,
+            "contentHash": "cc7a861d4103248a48806217652100782924a4f3",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsList\\searchResultsListRenderer.js",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsList\\searchResultsListRenderer.js",
+            "isDirectory": false,
+            "size": 50,
+            "modifiedTime": 1519842455564,
+            "changeTime": 1519842455564,
+            "contentHash": "8b79b016f08440c9b2f7d706a6d21229c854540b",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsTile\\searchResultsTile.auradoc",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsTile\\searchResultsTile.auradoc",
+            "isDirectory": false,
+            "size": 209,
+            "modifiedTime": 1519842793428,
+            "changeTime": 1519842793428,
+            "contentHash": "fd7f560d82324d6a8255c8c6ebf60698f5f93f1e",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsTile\\searchResultsTile.cmp",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsTile\\searchResultsTile.cmp",
+            "isDirectory": false,
+            "size": 1370,
+            "modifiedTime": 1519844119322,
+            "changeTime": 1519844119324,
+            "contentHash": "f8c44bd2ef87e586bbd93f0cd417dd01f3c98605",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsTile\\searchResultsTile.cmp-meta.xml",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsTile\\searchResultsTile.cmp-meta.xml",
+            "isDirectory": false,
+            "size": 249,
+            "modifiedTime": 1519842793405,
+            "changeTime": 1519842793405,
+            "contentHash": "b4054d0e19a5e73d15e6f7d23eecce03270e372b",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsTile\\searchResultsTile.css",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsTile\\searchResultsTile.css",
+            "isDirectory": false,
+            "size": 364,
+            "modifiedTime": 1519842871056,
+            "changeTime": 1519842871056,
+            "contentHash": "d2486a4e2e05016d795de19de52556a50accb84c",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsTile\\searchResultsTile.design",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsTile\\searchResultsTile.design",
+            "isDirectory": false,
+            "size": 40,
+            "modifiedTime": 1519842793430,
+            "changeTime": 1519842793430,
+            "contentHash": "c5618bc7228e29c74b07b78fd040e05ae8a541ec",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsTile\\searchResultsTile.svg",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsTile\\searchResultsTile.svg",
+            "isDirectory": false,
+            "size": 661,
+            "modifiedTime": 1519842793426,
+            "changeTime": 1519842793426,
+            "contentHash": "721eeffe17135535c3834b77f1e1968fe6360ed4",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsTile\\searchResultsTileController.js",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsTile\\searchResultsTileController.js",
+            "isDirectory": false,
+            "size": 65,
+            "modifiedTime": 1519842793416,
+            "changeTime": 1519842793416,
+            "contentHash": "194250e0c86b1981f8d4e7246be6b32954c6deaf",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsTile\\searchResultsTileHelper.js",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsTile\\searchResultsTileHelper.js",
+            "isDirectory": false,
+            "size": 45,
+            "modifiedTime": 1519842793419,
+            "changeTime": 1519842793419,
+            "contentHash": "fa35ebecd73c127729bf311a95b613f711a6f10b",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsTile\\searchResultsTileRenderer.js",
+        {
+            "sourcePath": "C:\\Users\\madhuv\\Documents\\Salesforce_Workspaces\\weeklyPlanner\\force-app\\main\\default\\aura\\searchResultsTile\\searchResultsTileRenderer.js",
+            "isDirectory": false,
+            "size": 50,
+            "modifiedTime": 1519842793423,
+            "changeTime": 1519842793423,
+            "contentHash": "8b79b016f08440c9b2f7d706a6d21229c854540b",
             "isMetadataFile": false,
             "state": "u"
         }

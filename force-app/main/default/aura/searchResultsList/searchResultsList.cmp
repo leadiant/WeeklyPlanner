@@ -1,9 +1,9 @@
 <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" 
                 controller="fullCalendarApexController" access="global">
 
-    <aura:attribute name="object" type="String" description="String value that determines which records to search" default="Contact"/>
+    <aura:attribute name="object" type="String" description="String value that determines where to search" default="Contact"/>
     <aura:attribute name="searchTerm" type="String" description="String value that determines searchKey"/>
-    <aura:attribute name="records" type="Object[]"/>
+    <aura:attribute name="searchResults" type="Object[]" description="Holds the Search Results"/>
     <aura:attribute name="pageSize" type="Integer" default="8"/>
     <aura:attribute name="page" type="Integer"/>
     <aura:attribute name="pages" type="Integer"/>
@@ -15,10 +15,19 @@
     <aura:registerEvent name="searchResultsAvailable" type="c:searchResultsAvailable"/>    
     
     <lightning:card title="{! v.object + ' Records (' + v.total + ')'}" iconName="standard:product">
+        <aura:set attribute="actions">
+                <lightning:buttonIcon iconName="utility:add"
+                variant="bare"
+                title="{! 'Create new ' + v.object}"
+                alternativeText="{! 'Create new ' + v.object}"
+                onclick="{!c.createNewRecord}"
+                name="{!v.object}"/>
+        </aura:set>
+
         <div aura:id="external-events" id="{!globalId + 'external-events'}">
-            <aura:iteration items="{!v.records}" var="item" indexVar="index">
+            <aura:iteration items="{!v.searchResults}" var="item" indexVar="index">
                 <lightning:layoutitem size="12">
-                <c:searchResultsTile result="{#item}" index="{#index}"/>
+                <c:searchResultsTile searchResult="{#item}" index="{#index}"/>
                 </lightning:layoutitem>
             </aura:iteration>
             
