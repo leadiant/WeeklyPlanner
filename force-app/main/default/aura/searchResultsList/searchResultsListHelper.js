@@ -4,9 +4,14 @@
         var action = component.get("c.getRecords");
         var uniqueId = component.getGlobalId() + 'external-events';
         var searchResultsAvailableEvent = $A.get("e.c:searchResultsAvailable");
+        var searchResultAvailableEvent = component.getEvent("searchResultAvailable"); ;
         var returnedRecords = [];
 
         searchResultsAvailableEvent.setParams({
+            "componentGlobalId": uniqueId
+        });
+        
+        searchResultAvailableEvent.setParams({
             "componentGlobalId": uniqueId
         });
 
@@ -32,7 +37,8 @@
                     component.set("v.page", returnValue.results.page);
                     component.set("v.total", returnValue.results.total);
                     component.set("v.pages", Math.ceil(returnValue.results.total/pageSize));
-                    searchResultsAvailableEvent.fire();
+                    //searchResultsAvailableEvent.fire();
+                    searchResultAvailableEvent.fire();
                 }
             } else {
                 //helper.setRecords(component, event, helper, []);

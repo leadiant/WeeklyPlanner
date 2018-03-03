@@ -4,10 +4,15 @@
     },
 
     searchResultsAvailablesHandler:function (component, event, helper) {
-        var isScriptLoaded = component.get("v.isScriptLoaded")
+        console.log("searchResultsAvailablesHandler");
+       // var isScriptLoaded = component.get("v.isScriptLoaded")
 
         if (event.getParam("componentGlobalId") !== undefined) {
             var uniqueId = event.getParam("componentGlobalId");
+            console.log(uniqueId);
+            component.set("v.searchResultsComponentId",uniqueId);
+            component.set("v.isSearchResultsAvailable",true);
+            helper.makeResultsDraggable(component);
         }
         component.makeSearchResultsDraggable = $A.getCallback(function(){
             $(document).ready(function(){
@@ -33,9 +38,9 @@
             });
         });
         
-        if (isScriptLoaded)
+    /*    if (isScriptLoaded)
             component.makeSearchResultsDraggable();
-
+*/
     },
 
     handleClickSave: function (component, event, helper) {
@@ -188,9 +193,24 @@
         ];
         helper.setModalBody(component, newModalBody);
     },
+    makeResultsDraggable:function (component, event, helper) {
+        
+    	var isScriptLoaded = component.get('v.isScriptLoaded');
+        var isSearchResultsAvailable = component.get('v.isSearchResultsAvailable');
+        
+        console.log("isScriptLoaded " + isScriptLoaded);
+        console.log("isSearchResultsAvailable " + isSearchResultsAvailable);
+        
+        if (isScriptLoaded && isSearchResultsAvailable) {
+            console.log("makeResultsDraggable");
+            var uniqueId = component.get("v.searchResultsComponentId");
+             helper.makeSearchResultsDraggable(component,uniqueId);
+        }
+    },
     jsLoaded: function (component, event, helper) {
+        console.log("jsLoaded");
         component.set("v.isScriptLoaded",true);
-        component.makeSearchResultsDraggable();
+       // component.makeSearchResultsDraggable();
         helper.getScheduledEvents(component);
         $(document).ready(function () {
             $('#calendar').fullCalendar({

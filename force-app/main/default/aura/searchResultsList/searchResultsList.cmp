@@ -1,6 +1,6 @@
 <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" 
                 controller="fullCalendarApexController" access="global">
-
+    
     <aura:attribute name="object" type="String" description="String value that determines where to search" default="Contact"/>
     <aura:attribute name="searchTerm" type="String" description="String value that determines searchKey"/>
     <aura:attribute name="searchResults" type="Object[]" description="Holds the Search Results"/>
@@ -12,7 +12,10 @@
     
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     <aura:handler event="c:searchFilterChange" action="{!c.filterChangeHandler}"/>
-    <aura:registerEvent name="searchResultsAvailable" type="c:searchResultsAvailable"/>    
+    <aura:registerEvent name="searchResultsAvailable" type="c:searchResultsAvailable"/>   
+    <aura:registerEvent name="searchResultAvailable" type="c:SearchResultAvailable" /> <!-- Cmp Event -->
+	
+    <aura:handler name="searchResultAvailable" event="c:SearchResultAvailable" action="{!c.searchResultAvailablesHandler}"/>
     
     <lightning:card title="{! v.object + ' Records (' + v.total + ')'}" iconName="standard:product">
         <aura:set attribute="actions">
